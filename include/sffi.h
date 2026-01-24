@@ -20,7 +20,7 @@ extern const char*	sffi_error_msg			(const	sffi_error_t error);
 extern void			sffi_error_free			(		sffi_error_t error);
 
 extern sffi_error_t	sffi_lib_open			(								sffi_lib_t*	lib, const char* name);
-extern sffi_error_t	sffi_lib_symbol			(sffi_symbol_t* symbol,	const 	sffi_lib_t	lib, const char* name);
+extern sffi_error_t	sffi_lib_symbol			(void* 			symbol,	const 	sffi_lib_t	lib, const char* name);
 extern sffi_error_t	sffi_lib_func			(sffi_func_t*	func,			sffi_lib_t	lib, const char* name, const char* desc);
 extern void*		sffi_lib_as_raw			(						const 	sffi_lib_t 	lib);
 extern void			sffi_lib_close			(								sffi_lib_t	lib);
@@ -29,7 +29,7 @@ extern void			sffi_func_call			(const sffi_func_t func, void* rvalue, void**	ava
 #ifdef LIBFFI_H
 extern void			sffi_func_call_raw		(const sffi_func_t func, void* rvalue, ffi_raw*	avalue);
 #endif /* LIBFFI_H */
-extern void*		sffi_func_as_raw		(const sffi_func_t func);
+extern const void*	sffi_func_as_raw		(const sffi_func_t func);
 
 extern sffi_error_t sffi_struct_type_alloc	(sffi_struct_type_t*	  struct_type, const	char* desc);
 extern uint_t		sffi_struct_type_size	(const sffi_struct_type_t struct_type);
