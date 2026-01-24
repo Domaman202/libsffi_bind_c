@@ -31,13 +31,13 @@ extern void			sffi_func_call_raw		(const sffi_func_t func, void* rvalue, ffi_raw
 #endif /* LIBFFI_H */
 extern const void*	sffi_func_as_raw		(const sffi_func_t func);
 
-extern sffi_error_t sffi_struct_type_alloc	(sffi_struct_type_t*	  struct_type, const	char* desc);
-extern uint_t		sffi_struct_type_size	(const sffi_struct_type_t struct_type);
-extern void			sffi_struct_type_free	(const sffi_struct_type_t struct_type);
-extern void*		sffi_struct_malloc		(const sffi_struct_type_t struct_type);
-extern void*		sffi_struct_calloc		(const sffi_struct_type_t struct_type);
-extern void			sffi_struct_set_raw		(const sffi_struct_type_t struct_type,			void* structure,	uint_t index, const	void* avalue);
-extern void			sffi_struct_get_raw		(const sffi_struct_type_t struct_type, const	void* structure,	uint_t index,		void* rvalue);
+extern sffi_error_t sffi_struct_type_alloc	(		sffi_struct_type_t*struct_type, const	char* desc);
+extern uint_t		sffi_struct_type_size	(const 	sffi_struct_type_t struct_type);
+extern void			sffi_struct_type_free	(const 	sffi_struct_type_t struct_type);
+extern void*		sffi_struct_malloc		(const 	sffi_struct_type_t struct_type);
+extern void*		sffi_struct_calloc		(const 	sffi_struct_type_t struct_type);
+extern void			sffi_struct_set_raw		(const 	sffi_struct_type_t struct_type,			void* structure,	uint_t index, const	void* avalue);
+extern void			sffi_struct_get_raw		(const 	sffi_struct_type_t struct_type, const	void* structure,	uint_t index,		void* rvalue);
 extern void			sffi_struct_free		(												void* structure);
 
 extern sffi_error_t	sffi_adapter_parse		(		sffi_adapter_t*	adapter, const char*				desc);
