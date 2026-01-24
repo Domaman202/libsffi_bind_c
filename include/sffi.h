@@ -10,7 +10,6 @@ typedef unsigned int 	uint_t;
 
 typedef void* 		  	sffi_error_t;
 typedef void* 		  	sffi_lib_t;
-typedef void* 			sffi_symbol_t;
 typedef void* 			sffi_func_t;
 typedef void* 		  	sffi_struct_type_t;
 typedef void* 		  	sffi_adapter_t;

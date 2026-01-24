@@ -15,8 +15,8 @@ sffi_lib_t tlib_open() {
 	return lib;
 }
 
-sffi_symbol_t tlib_symbol(sffi_lib_t lib, const char* name) {
-	sffi_symbol_t symbol;
+void* tlib_symbol(sffi_lib_t lib, const char* name) {
+	void* symbol;
 	if (sffi_error_t err = sffi_lib_symbol(&symbol, lib, name)) {
 		printf("Error: %s\n", sffi_error_msg(err));
 		sffi_error_free(err);
@@ -85,7 +85,7 @@ void tlib_close(sffi_lib_t lib) {
 
 
 void test_symbol(sffi_lib_t lib) {
-	sffi_symbol_t symbol = tlib_symbol(lib, "puts");
+	void* symbol = tlib_symbol(lib, "puts");
 	((void (*)(const char*)) symbol)("(symbol call)\t Hello, Symbol!");
 }
 
