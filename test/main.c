@@ -1,15 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#include "../sffi.h"
+#include <sffi.h>
 
-
-#ifdef __WIN32__
-#define TLIB_FILE "./libsffi_test.dll"
-#else
-#define TLIB_FILE "./libsffi_test.so"
-#endif
-
+#define TLIB_FILE "./testlib.so"
 
 sffi_lib_t tlib_open() {
 	sffi_lib_t lib;
