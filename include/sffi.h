@@ -48,7 +48,7 @@ extern void 		sffi_adapter_free		(		sffi_adapter_t	adapter);
 
 
 #ifdef __cplusplus
-extern "C" }
+}
 #endif
 
 #endif /* __LIB_SFFI_H__ */
