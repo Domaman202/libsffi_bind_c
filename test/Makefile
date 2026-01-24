@@ -1,8 +1,6 @@
 all:
-	gcc -o main main.c -I../include -L../lib  -lsffi  
-	gcc -shared -o testlib.so testlib.c
+	gcc -o main main.c -I../include -L../lib -lsffi -export-dynamic
 	./main
 
 clean:
 	rm main
-	rm testlib.so
