@@ -14,6 +14,19 @@ typedef void* 			sffi_func_t;
 typedef void* 		  	sffi_struct_type_t;
 typedef void* 		  	sffi_adapter_t;
 
+#define SFFI_NO_ERR					0
+#define SFFI_RUST_STR_TO_C_STR_ERR	1
+#define SFFI_C_STR_TO_RUST_STR_ERR	2
+#define SFFI_LIB_OPEN_ERR			3
+#define SFFI_LIB_SYMBOL_ERR			4
+#define SFFI_LIB_CLOSE_ERR			5
+#define SFFI_FFI_BAD_TYPEDEF_ERR	6
+#define SFFI_FFI_BAD_ABI_ERR		7
+#define SFFI_FFI_BAD_ARG_TYPEE_ERR	8
+#define SFFI_INVALID_DESCRIPTOR_ERR	9
+#define SFFI_INVALID_CAST_ERR		10
+#define SFFI_INVALID_ARGUMENTS_ERR	11
+
 extern uint_t		sffi_error_code			(const	sffi_error_t error);
 extern const char*	sffi_error_msg			(const	sffi_error_t error);
 extern void			sffi_error_free			(		sffi_error_t error);
